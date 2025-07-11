@@ -5,9 +5,10 @@
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #fff;
-  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F9F1E7; /* soft off-white */
+  
+  color: #333;
 }
 
 .container {
@@ -16,9 +17,16 @@ body {
   text-align: center;
 }
 
-h1 {
-  margin-bottom: 30px;
+.container h1 {
+  padding-top: 20px;
+  margin-top: 42px;
+  margin-bottom: 50px;
   font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  display: inline-block;
+  border-bottom: 4px solid #000000; /* green underline */
+  padding-bottom: 4px;
 }
 
 .product-grid {
@@ -28,54 +36,161 @@ h1 {
   justify-items: center;
 }
 
-.card {
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 250px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.image-placeholder {
-  height: 150px;
-  background-color: #ccc;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.card-content h2 {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.card-content p {
-  font-size: 0.9rem;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.price {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 button {
   padding: 8px 16px;
   border: none;
-  background-color: #ddd;
+  background-color: #b1bd69;
+  color: #fff;
   border-radius: 20px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
-  background-color: #bbb;
+  background-color: #1B4332;
 }
+
+
+
+/* Product Card Grid */
+.collection-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual Card */
+.product-card {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 350px;
+}
+
+.product-card .description {
+  font-size: 14px;
+  color: #333;
+  margin: 15px 0 10px;
+  text-align: left;
+}
+
+.product-card .price {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  color: #000;
+}
+
+
+
+
+/* ==== Header Layout ==== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+}
+
+/* ==== Nav Links ==== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ==== Icons and Hamburger ==== */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Hamburger hidden by default */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ==== Responsive Styles ==== */
+@media (max-width: 768px) {
+  /* Stack logo, menu and icons */
+  body {
+  overflow-x: hidden;
+}
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .icons {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  /* Nav links hidden initially */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+/* header closee responsive */
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -89,3 +204,5 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
+
