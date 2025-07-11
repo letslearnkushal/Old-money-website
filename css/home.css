@@ -123,6 +123,7 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 60px;
+    height: 90vh;
 }
 
 .hero-text {
@@ -160,4 +161,80 @@ header {
     width: 400px;
     height: auto;
     object-fit: cover;
+}
+
+
+
+/* --- New Collection Section --- */
+.collection-section {
+  background-color: #b0a089; /* Adjust if needed */
+  padding: 60px 20px;
+  text-align: center;
+  height: 250px;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+/* Product Card Grid */
+.collection-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual Card */
+.product-card {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 350px;
+}
+
+.product-card .description {
+  font-size: 14px;
+  color: #333;
+  margin: 15px 0 10px;
+  text-align: left;
+}
+
+.product-card .price {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  color: #000;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
 }
