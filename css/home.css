@@ -123,7 +123,8 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 60px;
-    height: 90vh;
+    height: max-content;
+    margin-bottom: 60px;
 }
 
 .hero-text {
@@ -170,7 +171,7 @@ header {
   background-color: #b0a089; /* Adjust if needed */
   padding: 60px 20px;
   text-align: center;
-  height: 250px;
+  height: 220px;
 }
 
 .section-title {
@@ -185,6 +186,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  padding-bottom: 40px;
 }
 
 /* Individual Card */
