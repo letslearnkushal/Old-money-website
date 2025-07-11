@@ -1,0 +1,163 @@
+/* ==== Reset & Base Styles ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f1e7;
+  overflow-x: hidden;
+}
+
+/* ==== Header Layout ==== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+}
+
+/* ==== Nav Links ==== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ==== Icons and Hamburger ==== */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Hamburger hidden by default */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ==== Responsive Styles ==== */
+@media (max-width: 768px) {
+  /* Stack logo, menu and icons */
+  body {
+  overflow-x: hidden;
+}
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .icons {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  /* Nav links hidden initially */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+/* header closee responsive */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 60px;
+}
+
+
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.discount {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.shop-btn {
+    background-color: #6d5d4d;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-image img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
